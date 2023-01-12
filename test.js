@@ -12,5 +12,5 @@ resp.data.activityBatchList[0].couponClassify[0].activityList[i].isActivityTime 
 }
 
 $done({
-	body: JSON.stringify(obj)
+	body: JSON.stringify(resp)
 });

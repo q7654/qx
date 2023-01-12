@@ -1,10 +1,12 @@
-let obj = JSON.parse($response.body);
+let resp = JSON.parse($response.body);
 
-obj["acquire"]=true;
+resp.data.serverTime = "2023-01-12 10:00:01";
 
-obj["changeablePkg"][0] = obj["currentPkg"];
-obj["currentPkg"] = obj["changeablePkg"][1];
+for(let i=0;i<resp.data.activityBatchList[0].couponClassify[0].activityList.length;i++){
 
+// console.log(resp.data.activityBatchList[0].couponClassify[0].activityList[i]);
+resp.data.activityBatchList[0].couponClassify[0].activityList[i].isActivityTime = true;
+}
 
 $done({
 	body: JSON.stringify(obj)

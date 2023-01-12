@@ -1,4 +1,7 @@
+console.log("----------->");
 let resp = JSON.parse($response.body);
+
+console.log(resp);
 
 resp.data.serverTime = "2023-01-12 10:00:01";
 
